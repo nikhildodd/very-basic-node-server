@@ -5,6 +5,12 @@ const app = express()
 const port = 3030
 
 
+const fs = require('fs');
+
+let rawdata = fs.readFileSync('data.json');
+let person = JSON.parse(rawdata);
+
+
 // Start the server using app.listen()
 
 app.use(express.urlencoded({
